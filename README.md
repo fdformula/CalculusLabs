@@ -25,3 +25,5 @@ This work is freely distributed under the MIT License.
 |   10        | Parametric and Polar Curves                            |
 |   11        | Sequences, Series, and Finite Difference Formulas      |
 |   12        | Trouble Shooting                                       |
+
+You may download the entire textbook by through ```<> Code ▾``` and Download Zip.
