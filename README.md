@@ -2,7 +2,7 @@
 David Wang
 ### Table of Contents
 
-|   Chapter      | Topics                                                 |
+|   Unit      | Topics                                                 |
 |   --------- | -------------------------------------------------------|
 |   1         | Getting Started with Mathematica                       |
 |   2         | Functions and Graphs                                   |
