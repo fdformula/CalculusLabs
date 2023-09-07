@@ -16,7 +16,7 @@ This work is freely distributed under the MIT License.
 |   1         | Getting Started with Mathematica                       |
 |   2         | Functions and Graphs                                   |
 |   3         | Lists, Equations, and Rules                            |
-|   4         | Limits and the Graphics Objects                        |
+|   4         | Limits and the ```Graphics``` Objects                        |
 |   5         | The Derivative and Tangent Lines                       |
 |   6         | Applications of the Derivative (1)                     |
 |   7         | Applications of the Derivative (2)                     |
