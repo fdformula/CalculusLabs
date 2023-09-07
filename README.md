@@ -2,7 +2,6 @@
 David Wang
 ## Table of Contents
 ### Unit 1		Getting Started with Mathematica
-### Unit 1		Getting Started with Mathematica
 ### Unit 2		Functions and Graphs
 ### Unit 3		Lists, Equations, and Rules
 ### Unit 4		Limits and the Graphics Objects
