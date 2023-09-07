@@ -26,4 +26,4 @@ This work is freely distributed under the MIT License.
 |   11        | Sequences, Series, and Finite Difference Formulas      |
 |   12        | Trouble Shooting                                       |
 
-You may download the entire textbook through ```<> Code ▾``` and Download ZIP at the top of this page.
+You may download the entire textbook through ```<> Code ▾``` at the top of this page and Download ZIP.
