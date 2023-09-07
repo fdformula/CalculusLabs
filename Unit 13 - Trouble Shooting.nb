@@ -1,0 +1,1215 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     45728,       1207]
+NotebookOptionsPosition[     37882,       1085]
+NotebookOutlinePosition[     38459,       1105]
+CellTagsIndexPosition[     38416,       1102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Unit 13 - Trouble Shooting",
+ FontWeight->"Plain"]], "Title",
+ CellChangeTimes->{{3.6403904600229807`*^9, 3.6403905201946287`*^9}, {
+   3.6403941995439835`*^9, 3.640394207302406*^9}, {3.6405042759081044`*^9, 
+   3.6405042930845957`*^9}, {3.641997026688299*^9, 3.641997052348578*^9}, {
+   3.642069857830206*^9, 3.642069873004301*^9}, {3.6421044112282*^9, 
+   3.642104421760852*^9}, {3.642191345797497*^9, 3.6421913527672763`*^9}, 
+   3.6426032250020328`*^9, {3.644838373397315*^9, 3.644838392890437*^9}, {
+   3.644838586166432*^9, 3.644838603579973*^9}, {3.644839038163126*^9, 
+   3.644839050008542*^9}, {3.6487593228847027`*^9, 3.6487593314958997`*^9}},
+ FontSize->44,
+ FontColor->RGBColor[
+  0.8, 0.043, 0.008],ExpressionUUID->"31f5f3fa-d3da-43be-9047-5ef442a274bb"],
+
+Cell[TextData[StyleBox["When your code seems correct but result is \
+unexpected, there are several commonly used trouble-shooting tools or \
+strategies that may help you quickly find and solve the problem.",
+ FontSize->12]], "Text",
+ CellChangeTimes->{{3.5226227292215867`*^9, 3.5226227301263885`*^9}, {
+   3.5325319424781723`*^9, 3.532531977515833*^9}, {3.5325325772120786`*^9, 
+   3.532532633715377*^9}, 3.5325329630631514`*^9, {3.532533160841896*^9, 
+   3.532533202618769*^9}, {3.532533405013522*^9, 3.5325334064331245`*^9}, {
+   3.532533460721219*^9, 3.5325334763056464`*^9}, {3.5325335194865217`*^9, 
+   3.5325335527613797`*^9}, 3.5325348146631804`*^9, {3.532534903630135*^9, 
+   3.532534950711017*^9}, {3.6487594062067575`*^9, 3.6487594394058576`*^9}, {
+   3.648759798942567*^9, 3.6487598132110853`*^9}, {3.6487642755475006`*^9, 
+   3.6487642813294973`*^9}, {3.6487693689409466`*^9, 
+   3.6487693740675497`*^9}, {3.6487694289476943`*^9, 3.648769434946618*^9}, {
+   3.6487694815555964`*^9, 3.648769482947893*^9}},
+ FontSize->16,ExpressionUUID->"7cdf2b2d-66cd-457d-a60a-d54f4d0b57f4"],
+
+Cell[TextData[{
+ "If ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " gives an error or a warning, it usually is helpful."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.64875952877726*^9, 3.648759533418664*^9}, {
+  3.6487597597164*^9, 3.6487597929258256`*^9}, {3.648759829260395*^9, 
+  3.6487599106372185`*^9}, {3.6487647778031626`*^9, 3.6487647868520966`*^9}, {
+  3.648769580130459*^9, 3.648769585635066*^9}, {3.6487696230349307`*^9, 
+  3.6487696752111435`*^9}, {3.6487697152269125`*^9, 
+  3.648769732467427*^9}},ExpressionUUID->"50900230-5b07-4cc7-b4cc-\
+a1a2e58c51ac"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "pi"}], ",", "pi"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6487695939186077`*^9, 3.648769609935068*^9}, {
+  3.901695723022756*^9, 3.9016957254301543`*^9}},
+ CellLabel->"",ExpressionUUID->"4c0bf623-a8a6-45a0-a8ee-54ee383ce617"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "plln"}], "MessageName"], ":", 
+  " ", "\<\"Limiting value \[NoBreak]\\!\\(-pi\\)\[NoBreak] in \
+\[NoBreak]\\!\\({x, \\(\\(-pi\\)\\), pi}\\)\[NoBreak] is not a machine-sized \
+real number. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/plln\\\", ButtonNote -> \
+\\\"Plot::plln\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6487696107411036`*^9, 
+  3.648770494342292*^9},ExpressionUUID->"a8940e80-1570-452a-b107-\
+8bc072b3e363"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "pi"}], ",", "pi"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.6487696107431545`*^9, 
+  3.6487704943462925`*^9},ExpressionUUID->"856972dc-874d-4012-bfc6-\
+2c521a978313"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The error says ",
+ StyleBox["pi",
+  FontColor->RGBColor[0, 0, 1]],
+ " is not a machine-sized real number or, putting it simply, it is not a \
+number. In fact, it must be Pi. Each build-in function or constant starts \
+with a capital letter."
+}], "Text",
+ CellChangeTimes->{{3.648769768194882*^9, 3.6487699099779763`*^9}, {
+   3.6487699448350115`*^9, 3.648769955626648*^9}, {3.6487699982505426`*^9, 
+   3.648770000780857*^9}, 3.6487704879299364`*^9, 
+   3.648770560231349*^9},ExpressionUUID->"2dfd1bd1-3907-4f6d-ab4e-\
+e3253603536a"],
+
+Cell["\<\
+Blue symbols in a command indicate that they are misspelled. If spelled \
+correctly, they are either variables without assigned values or functions \
+without definition.\
+\>", "Text",
+ CellDingbat->"\[LightBulb]",
+ CellChangeTimes->{{3.648770023466275*^9, 3.6487702543205853`*^9}, {
+  3.6487702850279217`*^9, 
+  3.648770328682667*^9}},ExpressionUUID->"b05698d2-5b8b-486c-b0b1-\
+872689868518"],
+
+Cell[TextData[{
+ "The command ",
+ Cell[BoxData[
+  ButtonBox["Clear",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Clear"]],ExpressionUUID->
+  "60fffeb5-c4e3-4b0c-8cd3-20ecb7faf567"],
+ " is actually our first and foremost tool. It removes symbols from ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " workspace."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.64875952877726*^9, 3.648759533418664*^9}, {
+   3.6487597597164*^9, 3.6487597929258256`*^9}, {3.648759829260395*^9, 
+   3.6487599106372185`*^9}, {3.6487647778031626`*^9, 3.6487647868520966`*^9}, 
+   3.648769580130459*^9, {3.6487703449152193`*^9, 3.6487703471314754`*^9}, {
+   3.64877038241873*^9, 3.6487703850331306`*^9}, {3.6487704518049364`*^9, 
+   3.6487704740421724`*^9}},ExpressionUUID->"69147529-6b0d-45bd-9e65-\
+82bd387c122c"],
+
+Cell[TextData[{
+ "      ",
+ StyleBox["Usage",
+  FontWeight->"Bold"],
+ ": ",
+ Cell[BoxData[
+  RowBox[{"Clear", "[", 
+   RowBox[{"x", ",", "x2", ",", "y", ",", "f"}], "]"}]],ExpressionUUID->
+  "e15496c1-4cb6-40f2-91f0-871f7d6dc29a"],
+ " removing symbols ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", ",", "x2", ",", "y", ","}], TraditionalForm]],ExpressionUUID->
+  "b256fc50-9d29-4fa0-b336-224678caec2c"],
+ " and ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],ExpressionUUID->
+  "a9ec1395-215d-4ebe-9ef8-dc63633d2dea"],
+ " from workspace.\n                 ",
+ Cell[BoxData[
+  RowBox[{"Clear", "[", 
+   RowBox[{"x", "*"}], "]"}]],ExpressionUUID->
+  "b0c528e6-b28a-4b4f-bbd7-94d1dde1bb78"],
+ " removing all symbols beginning with ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "38d71f20-187f-4951-ab86-1abb1990cd14"],
+ ", such as x, x2, xBar, etc.\n                 ",
+ Cell[BoxData[
+  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]],ExpressionUUID->
+  "ef477e0b-f5e3-4643-8bc4-f5c54b6ef02b"],
+ " removing all global symbols from workspace.\n                \n            \
+     For more information, refer to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " ",
+ ButtonBox["Wolfram Documentation",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/menuitem/DocumentationCenter"],
+ ".\n                   \n      For example, given that we have assigned a \
+value to the variable ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "ce3f5972-4f51-47ec-9b6b-4b27f3746bcd"],
+ " in some cell, such as"
+}], "Text",
+ CellChangeTimes->{{3.6487599224045515`*^9, 3.6487600126841927`*^9}, {
+  3.648760158234029*^9, 3.648760177426299*^9}, {3.6487602561020474`*^9, 
+  3.648760511999981*^9}, {3.6487605480720634`*^9, 3.648760589395046*^9}, {
+  3.6487606194186273`*^9, 3.648760649317437*^9}, {3.6487606828116007`*^9, 
+  3.6487606990966167`*^9}, {3.6487607543227544`*^9, 3.64876086583755*^9}, {
+  3.6487643190536222`*^9, 3.648764319272295*^9}, {3.6487648069193106`*^9, 
+  3.6487648125614724`*^9}, {3.6728375821167407`*^9, 
+  3.6728375906104174`*^9}},ExpressionUUID->"c35652fb-aec5-49b1-8d02-\
+6ed9688c49b2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "=", "100"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6487608688693237`*^9, 
+  3.6487608753544807`*^9}},ExpressionUUID->"12d622c8-a051-4cf7-b9c9-\
+160978b5fa63"],
+
+Cell[TextData[{
+ "now, we want to differentiate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"2", 
+     SuperscriptBox["x", "2"]}], "+", 
+    RowBox[{"3", "x"}], "+", "1"}], TraditionalForm]],ExpressionUUID->
+  "bcc0831b-f433-41e3-88ae-c32a132728b2"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.6487609232511444`*^9, 3.648760930673753*^9}, {
+  3.6487609656463675`*^9, 3.6487609888367376`*^9}, {3.6487643210538793`*^9, 
+  3.6487643213506765`*^9}},ExpressionUUID->"f54cd6db-4396-40a0-b0e4-\
+d4882107fb04"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", 
+     RowBox[{"x", "^", "2"}]}], "+", 
+    RowBox[{"3", "x"}], "-", "1"}], ",", "x"}], "]"}]], "Input",ExpressionUUID\
+->"2a56d215-c976-4d94-bb1f-8ab04463bac8"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "ivar"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(100\\)\[NoBreak] is not a valid variable. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/ivar\\\", \
+ButtonNote -> \\\"General::ivar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6487610020727134`*^9, 
+  3.6487704944192963`*^9},ExpressionUUID->"955be715-253c-4923-b874-\
+f671db9a6d27"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["\[PartialD]", "100"], "20299"}]], "Output",
+ CellChangeTimes->{3.6487610020727134`*^9, 
+  3.6487704944232965`*^9},ExpressionUUID->"5645318c-b013-4633-813b-\
+08e7b71f1ebb"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Obviously, this is not the answer, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"4", "x"}], "+", "3"}], TraditionalForm]],ExpressionUUID->
+  "8b359889-876b-4ac7-aeb1-976f79e69a67"],
+ ", as expected. What\[CloseCurlyQuote]s wrong? It is because the variable ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "f3ac018e-652e-443e-a239-ed7d33f36575"],
+ " has been assigned a value. To obtain correct answer, we have to remove the \
+variable ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "51e76b71-3966-45a1-99d8-60d57301bba9"],
+ " from present workspace."
+}], "Text",
+ CellChangeTimes->{{3.6487610199500065`*^9, 3.6487611689055195`*^9}, {
+  3.6487648457264614`*^9, 
+  3.6487648464296355`*^9}},ExpressionUUID->"4290814b-daea-4530-a927-\
+f517a62be4c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "x", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", 
+     RowBox[{"x", "^", "2"}]}], "+", 
+    RowBox[{"3", "x"}], "-", "1"}], ",", "x"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6487611809714518`*^9, 
+  3.6487611826438866`*^9}},ExpressionUUID->"2e87e694-e890-4d8c-b07f-\
+cb738ecc2e50"],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"4", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.64876118348757*^9, 
+  3.648770494445304*^9},ExpressionUUID->"76425640-fad4-4bc5-83a0-\
+5a9f39fb7368"]
+}, Open  ]],
+
+Cell[TextData[{
+ "It is always a good practice to start a new question with commands like \
+Clear[x, y, i, f] to remove ALL user\[CloseCurlyQuote]s symbols you are to \
+use from ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " workspace. It can eventually save us much time and trouble!"
+}], "Text",
+ CellDingbat->"\[LightBulb]",
+ CellChangeTimes->{{3.6487612756367087`*^9, 3.6487613194027877`*^9}, {
+  3.648761361258212*^9, 3.648761404769552*^9}, {3.648761443542263*^9, 
+  3.6487614758435802`*^9}, {3.6487624031846137`*^9, 3.64876240648203*^9}, {
+  3.6487634430808306`*^9, 3.6487634604437914`*^9}, {3.6487643649023247`*^9, 
+  3.6487643659807825`*^9}, {3.6487643963490577`*^9, 
+  3.6487644650494647`*^9}},ExpressionUUID->"5b067b36-9a5b-472e-9254-\
+caab9aff6466"],
+
+Cell[TextData[{
+ "Or, you may take another approach by using the built-in function ",
+ Cell[BoxData[
+  ButtonBox["Module",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Module"]],ExpressionUUID->
+  "7decfec3-263b-447e-b5b0-cf348bb95dfb"],
+ " (Unit 4) or ",
+ Cell[BoxData[
+  ButtonBox["Block",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Block"]],ExpressionUUID->
+  "b7894da6-8cad-4153-a6de-adc2335c57fe"],
+ " (Unit 6) to \[OpenCurlyDoubleQuote]package\[CloseCurlyDoubleQuote] all \
+commands for each question. Such as"
+}], "Text",
+ CellDingbat->"\[LightBulb]",
+ CellChangeTimes->{{3.6487615025501795`*^9, 3.648761560604661*^9}, {
+  3.6487616888672504`*^9, 3.6487616908831844`*^9}, {3.6487617424068203`*^9, 
+  3.648761880831051*^9}, {3.648762603746338*^9, 3.648762616075883*^9}, {
+  3.648762651396476*^9, 3.648762653084273*^9}, {3.6487629946965375`*^9, 
+  3.648763019544898*^9}, {3.648764498710325*^9, 
+  3.6487645190566263`*^9}},ExpressionUUID->"7542e940-45d3-4b47-aa07-\
+3682502d4636"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", "x", "}"}], ",", 
+   RowBox[{"(*", " ", 
+    RowBox[{"listing", " ", "all", " ", 
+     RowBox[{"user", "'"}], "s", " ", "symbols", " ", "to", " ", "appear", 
+     " ", "in", " ", "this", " ", "Block"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{"x", "^", "2"}]}], "+", 
+      RowBox[{"3", "x"}], "-", "1"}], ",", "x"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6487618862542806`*^9, 3.648761938361574*^9}, {
+  3.6487624592613077`*^9, 3.648762502319193*^9}, {3.6487634735091033`*^9, 
+  3.6487634785730066`*^9}},ExpressionUUID->"7260e8f7-7d2e-4abb-ac99-\
+5785f742375d"],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"4", " ", "x"}]}]], "Output",
+ CellChangeTimes->{{3.6487619326568317`*^9, 3.648761938924071*^9}, 
+   3.6487704944652987`*^9},ExpressionUUID->"0672309d-4499-4cc9-b53d-\
+12f189ad18d8"]
+}, Open  ]],
+
+Cell[TextData[{
+ "If you solve each question this way, it would be great because each \
+question has its own \[OpenCurlyDoubleQuote]workspace\[CloseCurlyDoubleQuote] \
+and, therefore, no question\[CloseCurlyQuote]s solution can interrupt any \
+other one\[CloseCurlyQuote]s. But the problem is that, with a complex \
+problem, we often solve it interactively step by step, and hardly know all \
+commands before we get the eventual solution. In this case, we solve the \
+problem in multiple cells step by step, and finally \
+\[OpenCurlyDoubleQuote]package\[CloseCurlyDoubleQuote] all the commands over \
+the cells into one ",
+ Cell[BoxData[
+  ButtonBox["Module",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Module"]],ExpressionUUID->
+  "052dbaa5-4334-4bb7-9b77-7ac47ce21f04"],
+ " or ",
+ Cell[BoxData[
+  ButtonBox["Block",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Block"]],ExpressionUUID->
+  "3b158270-05b4-429e-a170-e76b065e88c6"],
+ " command in a single large cell."
+}], "Text",
+ CellChangeTimes->{{3.648761958007141*^9, 3.648762026087775*^9}, {
+   3.6487625078989487`*^9, 3.648762561428521*^9}, {3.648762665601338*^9, 
+   3.648762697652334*^9}, {3.648762739219967*^9, 3.6487628676769824`*^9}, {
+   3.6487630501430655`*^9, 3.6487634205904984`*^9}, 3.648764289002345*^9, {
+   3.6487645809071674`*^9, 3.6487645815946674`*^9}, {3.6487646343522525`*^9, 
+   3.6487647036276007`*^9}, {3.6487647424499807`*^9, 
+   3.648764758049141*^9}},ExpressionUUID->"8761a3d8-940e-4a40-9b49-\
+f36011e404ec"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["Protect",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Protect"]],ExpressionUUID->
+  "68e1769e-df65-4055-9c53-03aa79f455fa"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Unprotect",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Unprotect"]],ExpressionUUID->
+  "7d98c111-d7c4-47ee-9817-02b6be74b8ba"],
+ "\n",
+ Cell[BoxData[
+  ButtonBox["Clear",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Clear"]],ExpressionUUID->
+  "52bfdc70-4bca-44e6-a4fb-0a581b0a6b59"],
+ " can remove all symbols, except protected ones, from workspace. If there \
+are some symbols which hold the same values as variables or definitions as \
+functions throughout ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebooks for a computing project, in order to prevent us from changing \
+their values or definitions by accident, we can add the ",
+ Cell[BoxData[
+  ButtonBox["Protected",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Protected"]], "InlineFormula",ExpressionUUID->
+  "629e28b8-407d-4e78-b613-75bc5229f774"],
+ " attribute to each of the symbols. For example,"
+}], "Text",
+ CellDingbat->"\[FilledDiamond]",
+ CellChangeTimes->{{3.648763533556493*^9, 
+  3.6487639668917217`*^9}},ExpressionUUID->"356d9c25-054c-45a5-b9df-\
+1288e67ba8b3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MaximumGrade", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Protect", "[", "MaximumGrade", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.648763977846302*^9, 3.648764009631646*^9}, 
+   3.648764043323413*^9},ExpressionUUID->"f64f7593-88f2-4f6b-9e54-\
+ad6a7134ceba"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaximumGrade", "=", "120"}]], "Input",
+ CellChangeTimes->{{3.648764021258213*^9, 
+  3.648764026118211*^9}},ExpressionUUID->"d80bf194-06d7-4f6a-adfd-\
+38ced87b18e4"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "wrsym"}], "MessageName"], ":", 
+  " ", "\<\"Symbol \[NoBreak]\\!\\(MaximumGrade\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/wrsym\\\", \
+ButtonNote -> \\\"Set::wrsym\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6487640275246773`*^9, 3.6487640678741255`*^9, 
+  3.648770494498299*^9},ExpressionUUID->"caf842fe-2614-44b4-9cc0-\
+e4177f0d6c90"],
+
+Cell[BoxData["120"], "Output",
+ CellChangeTimes->{3.6487640275246773`*^9, 3.6487640678741255`*^9, 
+  3.648770494501299*^9},ExpressionUUID->"dc69f204-7d2d-49c4-a2c6-\
+ee1fd55009b5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaximumGrade", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "its", " ", "value", " ", "has", " ", "not", " ", "been", " ", 
+    "modified"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6487640311656156`*^9, 3.6487640332596607`*^9}, {
+  3.6487640813600817`*^9, 
+  3.6487641049257965`*^9}},ExpressionUUID->"cf398a23-76d8-4ccf-b320-\
+899ae4895b63"],
+
+Cell[BoxData["100"], "Output",
+ CellChangeTimes->{3.6487640339473653`*^9, 3.6487640697492676`*^9, 
+  3.648770494520302*^9},ExpressionUUID->"ff3fcb13-cc50-43f1-b64f-\
+c1f0df22e5f8"]
+}, Open  ]],
+
+Cell[TextData[{
+ "We can remove the ",
+ Cell[BoxData[
+  ButtonBox["Protected",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Protected"]], "InlineFormula",ExpressionUUID->
+  "652f1d50-971d-492a-be30-0488812e9137"],
+ " attribute for a symbol by using ",
+ Cell[BoxData[
+  ButtonBox["Unprotect",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Unprotect"]],ExpressionUUID->
+  "85826aa9-245f-48c3-8617-c7a4c47d091c"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.648764129132162*^9, 
+  3.6487641879996367`*^9}},ExpressionUUID->"1f6c9bf5-086f-47de-a533-\
+9aa6a16fba85"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Unprotect", "[", "MaximumGrade", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6487640536684732`*^9, 
+  3.64876406368603*^9}},ExpressionUUID->"caddca5f-a6a3-47aa-b97c-\
+1a8a06dc60ab"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["MaximumGrade"], "Input",
+ CellChangeTimes->{{3.648764193375127*^9, 
+  3.64876419600068*^9}},ExpressionUUID->"0b0a7ba6-7435-443f-8800-\
+246cafc84217"],
+
+Cell[BoxData["100"], "Output",
+ CellChangeTimes->{3.6487641964850554`*^9, 
+  3.648770494545302*^9},ExpressionUUID->"d31a66e2-02ec-4b9a-8c45-\
+900dc910439d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaximumGrade", "=", "110", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"its", " ", "value", " ", "is", " ", "changeable"}], " ", 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.648764197750681*^9, 
+  3.6487642284120235`*^9}},ExpressionUUID->"4f30feb6-42ad-4b82-a112-\
+359b9cfbb3cf"],
+
+Cell[BoxData["110"], "Output",
+ CellChangeTimes->{3.6487642052673798`*^9, 
+  3.6487704945643053`*^9},ExpressionUUID->"0b103691-7229-4d3a-9614-\
+e487b7ca1c6b"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Is there any SPACE in between two consecutive symbols? ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " allows us to use a space to denote multiplication, which is convenient but \
+tens to cause troubles."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.6487648890032496`*^9, 
+  3.648765007180894*^9}},ExpressionUUID->"b86f0205-b556-4f57-a371-\
+b71af65e1340"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", "2"}], ";", 
+  RowBox[{"y", "=", "10"}], ";"}], "\[IndentingNewLine]", "xy"}], "Input",
+ CellChangeTimes->{{3.648765012212596*^9, 3.648765053749269*^9}, {
+  3.6487652892641373`*^9, 
+  3.6487652912175446`*^9}},ExpressionUUID->"bc180322-6122-4c21-9f32-\
+308db2cd4d9a"],
+
+Cell[BoxData["xy"], "Output",
+ CellChangeTimes->{3.648765031355547*^9, 
+  3.648770494583311*^9},ExpressionUUID->"4d011eea-acd5-4c45-9979-\
+6d99b9a9bfec"]
+}, Open  ]],
+
+Cell[TextData[{
+ "It is not 20 as expected. What\[CloseCurlyQuote]s wrong? Pay attention to \
+the color of the symbol, rather than symbols, ",
+ StyleBox["xy",
+  FontColor->RGBColor[0, 0, 1]],
+ ". The blue color indicates that ",
+ StyleBox["xy",
+  FontColor->RGBColor[0, 0, 1]],
+ " is single symbol which has no value or definition given to it. The problem \
+is that we missed a space in between ",
+ StyleBox["x",
+  FontColor->RGBColor[0, 0, 1]],
+ " and ",
+ StyleBox["y",
+  FontColor->RGBColor[0, 0, 1]],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.648765043638577*^9, 
+  3.64876528227887*^9}},ExpressionUUID->"70b9ac73-62f5-4d35-8306-\
+c840995702cc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", "2"}], ";", 
+  RowBox[{"y", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"x", " ", "y"}]}], "Input",
+ CellChangeTimes->{
+  3.6487652961711736`*^9},ExpressionUUID->"0b98f966-cef3-4ec2-9d76-\
+05ca2a28d252"],
+
+Cell[BoxData["20"], "Output",
+ CellChangeTimes->{3.648765297109029*^9, 
+  3.6487704946023073`*^9},ExpressionUUID->"76f90ea1-26ec-4392-93c1-\
+356afeea07f8"]
+}, Open  ]],
+
+Cell["\<\
+Now, x y are two symbols in black. The best way is to use an explicit \
+multiplication operator, *, to replace a space when multiplicands are \
+symbols, like x*y. If the first multiplicand is a constant, neither space nor \
+multiplication operator * is needed. Such as\
+\>", "Text",
+ CellChangeTimes->{{3.6487653235026927`*^9, 3.6487655018740253`*^9}, {
+   3.6487656260467706`*^9, 3.648765641690199*^9}, {3.6487656959489923`*^9, 
+   3.648765761912672*^9}, 
+   3.6487681085378604`*^9},ExpressionUUID->"66e8f4de-fdc3-4fee-a680-\
+0fef092ed801"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"100", "x"}]}], "Input",
+ CellChangeTimes->{{3.648765765444557*^9, 
+  3.648765778134253*^9}},ExpressionUUID->"5a3af885-6b66-4271-9b80-\
+5da0c77f409f"],
+
+Cell[BoxData["1000"], "Output",
+ CellChangeTimes->{{3.64876577264915*^9, 3.648765778493931*^9}, 
+   3.648770494622308*^9},ExpressionUUID->"6c72fb40-581e-46df-bb92-\
+dfb45c5899f1"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Is the name of a built-in function or constant capitalized? We get used to \
+write sin(x), cos(x), ln(x), etc., but with ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", we must write them as Sin[x], Cos[x], Log[x], and so on."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.648765833767351*^9, 3.6487659664626503`*^9}, {
+  3.6487662085117674`*^9, 3.648766210496147*^9}, {3.6487681200723696`*^9, 
+  3.6487681207287087`*^9}},ExpressionUUID->"70695fe5-7dc1-4602-9f7f-\
+3c3348798546"],
+
+Cell["    In reality, if we type", "Text",
+ CellChangeTimes->{{3.6487659747145433`*^9, 
+  3.648766003753488*^9}},ExpressionUUID->"e8656507-5021-4810-8a13-\
+af4585c4d3bd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sin", "[", "pi", "]"}]], "Input",
+ CellChangeTimes->{{3.648766006769923*^9, 3.6487660306671743`*^9}, {
+  3.6487662484555087`*^9, 
+  3.648766283319769*^9}},ExpressionUUID->"c4f5b3a2-e122-4073-b44b-\
+247f614062e5"],
+
+Cell[BoxData[
+ RowBox[{"sin", "[", "pi", "]"}]], "Output",
+ CellChangeTimes->{
+  3.648766041732051*^9, {3.648766255190734*^9, 3.6487662842259398`*^9}, 
+   3.6487704946413083`*^9},ExpressionUUID->"b9de7a33-f891-41a6-8f37-\
+2210be9b6e3b"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " just outputs what we type. We should know something is wrong in our input. \
+The obvious clue exists in the symbols in blue color. Here, ",
+ StyleBox["sin",
+  FontColor->RGBColor[0, 0, 1]],
+ " and ",
+ StyleBox["pi",
+  FontColor->RGBColor[0, 0, 1]],
+ " are the incorrect names of Sin and Pi."
+}], "Text",
+ CellChangeTimes->{{3.6487660557354136`*^9, 
+  3.6487662269519076`*^9}},ExpressionUUID->"84891967-0b7a-47d0-86e4-\
+40f8bc2af449"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sin", "[", "Pi", "]"}]], "Input",
+ CellChangeTimes->{{3.6487662372814445`*^9, 
+  3.648766272161457*^9}},ExpressionUUID->"c39e7f54-b08f-49e2-86e0-\
+4b943a7479fb"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.6487662867106853`*^9, 
+  3.6487704946603107`*^9},ExpressionUUID->"cf57092d-9935-46a0-a981-\
+32f8fc96fa83"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Is a function correctly defined l",
+ StyleBox["ike ",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{"...", "?"}]}]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "42798dbb-4b92-4d67-b667-5022c3d06931"],
+ " The underscore following each argument is required. And usually, ",
+ Cell[BoxData[":="],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "e531a86a-9710-47bf-a51d-e00297197f7d"],
+ " (",
+ Cell[BoxData[
+  ButtonBox["SetDelayed",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/SetDelayed"]], "InlineFormula",ExpressionUUID->
+  "ed600175-ca58-4fc0-9657-41e818dc490f"],
+ ") is used."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.6487663037288327`*^9, 3.6487665367483997`*^9}, {
+  3.6487665935765247`*^9, 
+  3.6487665935765247`*^9}},ExpressionUUID->"e856d6d8-c807-42c5-8074-\
+5cf3a78e0b80"],
+
+Cell[TextData[{
+ StyleBox["Is",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  RowBox[{"==", 
+   ButtonBox[
+    RowBox[{"(", "Equal", ")"}],
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Equal"]}]],ExpressionUUID->
+  "5f1237f9-ed68-43dd-8ccc-c1a3e7123c62"],
+ StyleBox[" used in commands such as ",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  ButtonBox["Solve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Solve"]],ExpressionUUID->
+  "11a3858e-85ed-40bb-a277-16935bdecb02"],
+ StyleBox[", ",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  ButtonBox["NSolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/NSolve"]],ExpressionUUID->
+  "37f565a4-f126-4052-b530-e7f2f3715443"],
+ StyleBox[", ",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  ButtonBox["DSolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/DSolve"]],ExpressionUUID->
+  "1a18aa39-e607-47c8-a383-9d23914d3380"],
+ StyleBox[", ",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  ButtonBox["ContourPlot",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/ContourPlot"]],ExpressionUUID->
+  "6d18fdc5-41fa-44e5-86a3-66a1ffd34daa"],
+ StyleBox[", and so on, for equations? In most cases, new learners of ",
+  FontColor->GrayLevel[0]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->GrayLevel[0]],
+ StyleBox[" tend to use",
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  ButtonBox[
+   RowBox[{"=", 
+    RowBox[{"(", "Set", ")"}]}],
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Set"]],ExpressionUUID->
+  "88e09222-1be6-42f4-952e-74c3e77a8a0e"],
+ " to denote equality as in algebra (for human beings)."
+}], "ItemNumbered",
+ CellChangeTimes->{
+  3.648766601188508*^9, {3.64876664014637*^9, 
+   3.648766855553238*^9}},ExpressionUUID->"4ee50c08-f1e5-4d36-810d-\
+ef5194ed38f1"],
+
+Cell[TextData[{
+ StyleBox["Are (parentheses), [brackets], {braces} correctly used?",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" We need weeks to get used to their specific usage in ",
+  FontColor->GrayLevel[0]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->GrayLevel[0]],
+ StyleBox[". Refer to Unit 1.",
+  FontColor->GrayLevel[0]]
+}], "ItemNumbered",
+ CellChangeTimes->{{3.6487668694611692`*^9, 3.6487671584239445`*^9}, {
+  3.648767396336996*^9, 3.6487674346563807`*^9}, {3.6487676900795403`*^9, 
+  3.6487677217916026`*^9}},ExpressionUUID->"e152287d-7519-42b9-a12b-\
+b88558b3298b"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+( )  Parentheses are applied to control the order of evaluation, which is \
+exactly the way we use in mathematics.\
+\>", "SubitemNumbered",
+ CellChangeTimes->{{3.648767550945238*^9, 3.6487675607296333`*^9}, {
+   3.648767591178376*^9, 3.6487676037759094`*^9}, 
+   3.6487676660111623`*^9},ExpressionUUID->"a3cbf30f-46ff-464b-911c-\
+b00ac7bf6421"],
+
+Cell["\<\
+[ ]  Square brackets are used when we define or call a function.\
+\>", "SubitemNumbered",
+ CellChangeTimes->{{3.648767561104637*^9, 3.648767567934769*^9}, {
+  3.6487676141689787`*^9, 
+  3.648767643083851*^9}},ExpressionUUID->"2f00fc0c-997e-4710-aa22-\
+1167eb9246a2"],
+
+Cell["{ } Curly braces are used to create a list.", "SubitemNumbered",
+ CellChangeTimes->{
+  3.648767568247192*^9, 3.64876761781091*^9, {3.6487676593846207`*^9, 
+   3.648767670887211*^9}},ExpressionUUID->"ccb81394-5ba8-46fe-a434-\
+816d79cc407e"]
+}, Open  ]],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["sin", "2"], "(", "x", ")"}], TraditionalForm]],
+  ExpressionUUID->"000a3ed4-3598-43c5-b256-3758e8e1e006"],
+ ", should I use ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["Sin", "2"], "[", "x", "]"}], " ", "or", " ", 
+   SuperscriptBox[
+    RowBox[{"Sin", "[", "x", "]"}], "2"]}]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "296d1c54-a52d-44a4-b76a-09b9edbe84e5"],
+ "? Remember that the symbol right before the open square bracket [ is the \
+name of a function. So, this is equivalent to asking which one of ",
+ Cell[BoxData[
+  SuperscriptBox["Sin", "2"]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "630b8462-9928-4cd4-a8b3-4260950d46d6"],
+ " and ",
+ Cell[BoxData["Sin"],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "913c2da0-850b-449a-994c-e0ed027c7747"],
+ " is a function name. Obviously, ",
+ Cell[BoxData[
+  SuperscriptBox["Sin", "2"]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "a59cadda-7797-4e78-9654-0fd8001bcd4c"],
+ " is not. Therefore, we use ",
+ Cell[BoxData[
+  SuperscriptBox[
+   RowBox[{"Sin", "[", "x", "]"}], "2"]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "34774646-7a17-42e0-a08b-bcb43d1b0d5f"],
+ " in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["sin", "2"], "(", "x", ")"}], TraditionalForm]],
+  ExpressionUUID->"2e163dd1-e266-4587-9a6c-ccf66b8e7c87"],
+ "."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.6487668694611692`*^9, 3.6487671584239445`*^9}, 
+   3.648767396336996*^9, {3.6487707478203425`*^9, 
+   3.648770768227604*^9}},ExpressionUUID->"a8a731fb-3aa1-43a6-a0f1-\
+82a0e9ff7234"],
+
+Cell[TextData[{
+ "Similarly, we use ",
+ Cell[BoxData[
+  RowBox[{"ArcSin", "[", "x", "]"}]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "87d885e2-919c-4878-bde9-9a2b0f4d19c0"],
+ " instead of ",
+ Cell[BoxData[
+  RowBox[{
+   SuperscriptBox["Sin", 
+    RowBox[{"-", "1"}]], "[", "x", "]"}]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "5290f912-916b-4775-9587-6b1a5578533e"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["sin", 
+     RowBox[{"-", "1"}]], "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "767483b1-a636-4468-a349-76344abc97b6"],
+ "."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.6487671591588025`*^9, 3.6487672921786623`*^9}, {
+  3.6487677480013275`*^9, 
+  3.6487677480168853`*^9}},ExpressionUUID->"e2d6f5f7-4303-428e-8851-\
+0156f828fe36"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],ExpressionUUID->
+  "b5aaad26-cdc7-422f-a09f-e5f885af0bab"],
+ " or Integrate[Sin[x],{x,0,1}] ? The latter is preferred. Similarly, \
+Sum[i,{i,1,100}]  is better than ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "100"], "i"}], TraditionalForm]],ExpressionUUID->
+  "8ef7e506-24a1-4f93-9f6b-cbc81d84f98c"],
+ ". See Unit 1."
+}], "ItemNumbered",
+ CellDingbat->None,
+ CellChangeTimes->{{3.648767893104768*^9, 3.648767930237755*^9}, {
+  3.6487679822218833`*^9, 3.6487679843317757`*^9}, {3.6487680148867598`*^9, 
+  3.648768016027461*^9}, {3.648770817184847*^9, 
+  3.6487708285065327`*^9}},ExpressionUUID->"c8633755-b751-4d72-bedf-\
+2ace5bc39675"],
+
+Cell["\<\
+If your command looks perfect but can never give you (correct) answer, delete \
+the cell of the command, and retype your command.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.648768031234804*^9, 
+  3.6487680337979393`*^9}},ExpressionUUID->"7834c691-178d-490f-ac3a-\
+80d848212618"],
+
+Cell["\<\
+You have checked all the foregoing items and made suggested changes, but your \
+code stubbornly fails to work. Unfortunately, this happens, and it may happen \
+often. Then, try the following last approaches.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.648768043018653*^9, 3.6487680919085054`*^9}, {
+  3.648768170805769*^9, 3.648768187908919*^9}, {3.648768229733121*^9, 
+  3.648768297533176*^9}, {3.6487683459643173`*^9, 3.648768366299855*^9}, {
+  3.648769503270862*^9, 3.648769506065257*^9}, {3.6487708702753196`*^9, 
+  3.64877087079333*^9}},ExpressionUUID->"bb3b45d9-8ac6-4119-812d-\
+2b97a2df80b0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Quit the kernel of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " by choosing the menu item Evaluation ",
+ Cell[BoxData[
+  FormBox["\[Rule]", TraditionalForm]],ExpressionUUID->
+  "bb4a2986-16c9-44de-ae9c-f741845c10ae"],
+ " Quit Kernel ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Rule]", " "}], TraditionalForm]],ExpressionUUID->
+  "d784eefe-2c6b-491f-b49b-9a6753f45100"],
+ "Local and, then, run your code again."
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.6487683814697933`*^9, 
+  3.64876852142518*^9}},ExpressionUUID->"c8cb1a08-fbfc-4c1c-b31d-\
+6d32ec289c24"],
+
+Cell[TextData[{
+ "If it doesn\[CloseCurlyQuote]t work, save your ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook(s), quit ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " by choosing the menu item File ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Rule]", " "}], TraditionalForm]],ExpressionUUID->
+  "193c6dab-5c46-446c-8c36-b1a704c9a3a9"],
+ "Exit (Windows) or ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Rule]", " "}], TraditionalForm]],ExpressionUUID->
+  "7efc201f-f492-4b39-ad7f-fbdf47ecfe4f"],
+ "Quit ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " (Mac OS). Then, restart ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", and run your code again. It should work if your code is correct."
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.6487685227232866`*^9, 3.648768618732217*^9}, {
+  3.648768704949211*^9, 3.6487687762075505`*^9}, {3.6487695154452477`*^9, 
+  3.6487695157732506`*^9}, {3.648770932930571*^9, 
+  3.648770940481263*^9}},ExpressionUUID->"6fb64282-752b-4aae-b0e5-\
+0166a82e1037"],
+
+Cell[TextData[{
+ "If it still fails, restart your computer, start ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", and test your code."
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.648768778964107*^9, 3.648768884587651*^9}, {
+  3.6487689875251684`*^9, 
+  3.648768988091423*^9}},ExpressionUUID->"daab4371-bd74-4a8d-abe6-\
+ef61a9f1655d"]
+}, Open  ]],
+
+Cell["\<\
+If all these steps don\[CloseCurlyQuote]t help, delete the part of your code \
+which doesn\[CloseCurlyQuote]t work, have a good rest, and rework your \
+solution.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.648768994518103*^9, 
+  3.6487690209162283`*^9}},ExpressionUUID->"eabb9697-a25e-4d55-8937-\
+0e1a535070ea"]
+}, Open  ]],
+
+Cell["", "Text",ExpressionUUID->"584a16e4-82e8-4d91-8745-21dbe9df2ebc"],
+
+Cell["\<\
+Good luck! The more experiences your acquire, the more intuition you will \
+possess. Programming is mechanical. It is also an art. The more time you \
+playfully give to it, the more passionate you will be for it.\
+\>", "Text",
+ CellChangeTimes->{{3.6487690059078164`*^9, 3.6487691281160455`*^9}, {
+  3.6487691799951468`*^9, 3.64876925529183*^9}, {3.6487692921091833`*^9, 
+  3.64876929346749*^9}, {3.648769325532492*^9, 3.6487693325476036`*^9}, {
+  3.6487710417329135`*^9, 
+  3.6487710434091377`*^9}},ExpressionUUID->"d4f19a1d-8910-4dd3-848e-\
+47eadeb5307d"],
+
+Cell["\<\
+
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.6487705905216627`*^9, 
+  3.648770595432406*^9}},ExpressionUUID->"dbc09d1c-6a86-4e46-84b5-\
+3dfcbf43594c"],
+
+Cell["\[Copyright] 2015-2023 by David Wang, dwang@liberty.edu", "Text",
+ CellDingbat->"\[FivePointedStar]",
+ CellChangeTimes->{{3.6483149492842007`*^9, 3.648314954832594*^9}, {
+   3.648314991811002*^9, 3.6483150274926786`*^9}, {3.648315066674386*^9, 
+   3.648315076942264*^9}, {3.6483151278759356`*^9, 3.6483151667054334`*^9}, {
+   3.6483152049979057`*^9, 3.648315328479961*^9}, {3.648315362562394*^9, 
+   3.6483154831168585`*^9}, {3.6483155255553427`*^9, 3.6483155884987645`*^9}, 
+   3.6483156269313216`*^9, 3.6483336326035786`*^9, 3.7436052896734314`*^9, 
+   3.7436063785207615`*^9, {3.901695538992372*^9, 
+   3.901695539776718*^9}},ExpressionUUID->"ac8cada2-311f-41e7-818a-\
+399f0f814234"]
+}, Open  ]]
+},
+WindowSize->{1020., 784.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
+Magnification->1.2000000476837158`,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2900185a-c370-47bc-b5a1-6ec827f1aefd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 791, 12, 108, "Title",ExpressionUUID->"31f5f3fa-d3da-43be-9047-5ef442a274bb"],
+Cell[1374, 36, 1088, 15, 54, "Text",ExpressionUUID->"7cdf2b2d-66cd-457d-a60a-d54f4d0b57f4"],
+Cell[2465, 53, 573, 12, 26, "ItemNumbered",ExpressionUUID->"50900230-5b07-4cc7-b4cc-a1a2e58c51ac"],
+Cell[CellGroupData[{
+Cell[3063, 69, 383, 9, 34, "Input",ExpressionUUID->"4c0bf623-a8a6-45a0-a8ee-54ee383ce617"],
+Cell[3449, 80, 589, 12, 30, "Message",ExpressionUUID->"a8940e80-1570-452a-b107-8bc072b3e363"],
+Cell[4041, 94, 322, 9, 34, "Output",ExpressionUUID->"856972dc-874d-4012-bfc6-2c521a978313"]
+}, Open  ]],
+Cell[4378, 106, 550, 12, 54, "Text",ExpressionUUID->"2dfd1bd1-3907-4f6d-ab4e-e3253603536a"],
+Cell[4931, 120, 402, 9, 54, "Text",ExpressionUUID->"b05698d2-5b8b-486c-b0b1-872689868518"],
+Cell[5336, 131, 796, 18, 29, "ItemNumbered",ExpressionUUID->"69147529-6b0d-45bd-9e65-82bd387c122c"],
+Cell[6135, 151, 2137, 54, 158, "Text",ExpressionUUID->"c35652fb-aec5-49b1-8d02-6ed9688c49b2"],
+Cell[8275, 207, 199, 5, 34, "Input",ExpressionUUID->"12d622c8-a051-4cf7-b9c9-160978b5fa63"],
+Cell[8477, 214, 507, 14, 34, "Text",ExpressionUUID->"f54cd6db-4396-40a0-b0e4-d4882107fb04"],
+Cell[CellGroupData[{
+Cell[9009, 232, 234, 7, 34, "Input",ExpressionUUID->"2a56d215-c976-4d94-bb1f-8ab04463bac8"],
+Cell[9246, 241, 510, 10, 30, "Message",ExpressionUUID->"955be715-253c-4923-b874-f671db9a6d27"],
+Cell[9759, 253, 211, 5, 34, "Output",ExpressionUUID->"5645318c-b013-4633-813b-08e7b71f1ebb"]
+}, Open  ]],
+Cell[9985, 261, 816, 21, 54, "Text",ExpressionUUID->"4290814b-daea-4530-a927-f517a62be4c6"],
+Cell[CellGroupData[{
+Cell[10826, 286, 368, 10, 56, "Input",ExpressionUUID->"2e87e694-e890-4d8c-b07f-cb738ecc2e50"],
+Cell[11197, 298, 196, 5, 34, "Output",ExpressionUUID->"76425640-fad4-4bc5-83a0-5a9f39fb7368"]
+}, Open  ]],
+Cell[11408, 306, 768, 15, 54, "Text",ExpressionUUID->"5b067b36-9a5b-472e-9254-caab9aff6466"],
+Cell[12179, 323, 994, 23, 57, "Text",ExpressionUUID->"7542e940-45d3-4b47-aa07-3682502d4636"],
+Cell[CellGroupData[{
+Cell[13198, 350, 748, 19, 78, "Input",ExpressionUUID->"7260e8f7-7d2e-4abb-ac99-5785f742375d"],
+Cell[13949, 371, 226, 5, 84, "Output",ExpressionUUID->"0672309d-4499-4cc9-b53d-12f189ad18d8"]
+}, Open  ]],
+Cell[14190, 379, 1498, 30, 84, "Text",ExpressionUUID->"8761a3d8-940e-4a40-9b49-f36011e404ec"],
+Cell[15691, 411, 1273, 35, 84, "Text",ExpressionUUID->"356d9c25-054c-45a5-b9df-1288e67ba8b3"],
+Cell[16967, 448, 321, 7, 84, "Input",ExpressionUUID->"f64f7593-88f2-4f6b-9e54-ad6a7134ceba"],
+Cell[CellGroupData[{
+Cell[17313, 459, 188, 4, 84, "Input",ExpressionUUID->"d80bf194-06d7-4f6a-adfd-38ced87b18e4"],
+Cell[17504, 465, 532, 10, 84, "Message",ExpressionUUID->"caf842fe-2614-44b4-9cc0-e4177f0d6c90"],
+Cell[18039, 477, 180, 3, 84, "Output",ExpressionUUID->"dc69f204-7d2d-49c4-a2c6-ee1fd55009b5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18256, 485, 371, 9, 84, "Input",ExpressionUUID->"cf398a23-76d8-4ccf-b320-899ae4895b63"],
+Cell[18630, 496, 180, 3, 84, "Output",ExpressionUUID->"ff3fcb13-cc50-43f1-b64f-c1f0df22e5f8"]
+}, Open  ]],
+Cell[18825, 502, 562, 17, 84, "Text",ExpressionUUID->"1f6c9bf5-086f-47de-a533-9aa6a16fba85"],
+Cell[19390, 521, 218, 5, 84, "Input",ExpressionUUID->"caddca5f-a6a3-47aa-b97c-1a8a06dc60ab"],
+Cell[CellGroupData[{
+Cell[19633, 530, 163, 3, 84, "Input",ExpressionUUID->"0b0a7ba6-7435-443f-8800-246cafc84217"],
+Cell[19799, 535, 156, 3, 84, "Output",ExpressionUUID->"d31a66e2-02ec-4b9a-8c45-900dc910439d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19992, 543, 299, 7, 84, "Input",ExpressionUUID->"4f30feb6-42ad-4b82-a112-359b9cfbb3cf"],
+Cell[20294, 552, 158, 3, 84, "Output",ExpressionUUID->"0b103691-7229-4d3a-9614-e487b7ca1c6b"]
+}, Open  ]],
+Cell[20467, 558, 377, 9, 84, "ItemNumbered",ExpressionUUID->"b86f0205-b556-4f57-a371-b71af65e1340"],
+Cell[CellGroupData[{
+Cell[20869, 571, 311, 7, 84, "Input",ExpressionUUID->"bc180322-6122-4c21-9f32-308db2cd4d9a"],
+Cell[21183, 580, 153, 3, 84, "Output",ExpressionUUID->"4d011eea-acd5-4c45-9979-6d99b9a9bfec"]
+}, Open  ]],
+Cell[21351, 586, 645, 19, 84, "Text",ExpressionUUID->"70b9ac73-62f5-4d35-8306-c840995702cc"],
+Cell[CellGroupData[{
+Cell[22021, 609, 257, 7, 84, "Input",ExpressionUUID->"0b98f966-cef3-4ec2-9d76-05ca2a28d252"],
+Cell[22281, 618, 155, 3, 84, "Output",ExpressionUUID->"76f90ea1-26ec-4392-93c1-356afeea07f8"]
+}, Open  ]],
+Cell[22451, 624, 551, 10, 84, "Text",ExpressionUUID->"66e8f4de-fdc3-4fee-a680-0fef092ed801"],
+Cell[CellGroupData[{
+Cell[23027, 638, 243, 6, 84, "Input",ExpressionUUID->"5a3af885-6b66-4271-9b80-5da0c77f409f"],
+Cell[23273, 646, 179, 3, 84, "Output",ExpressionUUID->"6c72fb40-581e-46df-bb92-dfb45c5899f1"]
+}, Open  ]],
+Cell[23467, 652, 501, 10, 84, "ItemNumbered",ExpressionUUID->"70695fe5-7dc1-4602-9f7f-3c3348798546"],
+Cell[23971, 664, 170, 3, 32, "Text",ExpressionUUID->"e8656507-5021-4810-8a13-af4585c4d3bd"],
+Cell[CellGroupData[{
+Cell[24166, 671, 236, 5, 34, "Input",ExpressionUUID->"c4f5b3a2-e122-4073-b44b-247f614062e5"],
+Cell[24405, 678, 236, 5, 35, "Output",ExpressionUUID->"b9de7a33-f891-41a6-8f37-2210be9b6e3b"]
+}, Open  ]],
+Cell[24656, 686, 501, 14, 54, "Text",ExpressionUUID->"84891967-0b7a-47d0-86e4-40f8bc2af449"],
+Cell[CellGroupData[{
+Cell[25182, 704, 185, 4, 34, "Input",ExpressionUUID->"c39e7f54-b08f-49e2-86e0-4b943a7479fb"],
+Cell[25370, 710, 156, 3, 34, "Output",ExpressionUUID->"cf57092d-9935-46a0-a981-32f8fc96fa83"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25563, 718, 863, 25, 29, "ItemNumbered",ExpressionUUID->"e856d6d8-c807-42c5-8074-5cf3a78e0b80"],
+Cell[26429, 745, 1745, 57, 50, "ItemNumbered",ExpressionUUID->"4ee50c08-f1e5-4d36-810d-ef5194ed38f1"],
+Cell[28177, 804, 599, 14, 26, "ItemNumbered",ExpressionUUID->"e152287d-7519-42b9-a12b-b88558b3298b"],
+Cell[CellGroupData[{
+Cell[28801, 822, 354, 7, 26, "SubitemNumbered",ExpressionUUID->"a3cbf30f-46ff-464b-911c-b00ac7bf6421"],
+Cell[29158, 831, 276, 6, 26, "SubitemNumbered",ExpressionUUID->"2f00fc0c-997e-4710-aa22-1167eb9246a2"],
+Cell[29437, 839, 245, 4, 26, "SubitemNumbered",ExpressionUUID->"ccb81394-5ba8-46fe-a434-816d79cc407e"]
+}, Open  ]],
+Cell[29697, 846, 1684, 51, 47, "ItemNumbered",ExpressionUUID->"a8a731fb-3aa1-43a6-a0f1-82a0e9ff7234"],
+Cell[31384, 899, 779, 25, 27, "ItemNumbered",ExpressionUUID->"e2d6f5f7-4303-428e-8851-0156f828fe36"],
+Cell[32166, 926, 913, 24, 30, "ItemNumbered",ExpressionUUID->"c8633755-b751-4d72-bedf-2ace5bc39675"],
+Cell[33082, 952, 289, 6, 26, "ItemNumbered",ExpressionUUID->"7834c691-178d-490f-ac3a-80d848212618"],
+Cell[33374, 960, 609, 10, 44, "ItemNumbered",ExpressionUUID->"bb3b45d9-8ac6-4119-812d-2b97a2df80b0"],
+Cell[CellGroupData[{
+Cell[34008, 974, 587, 17, 26, "SubitemNumbered",ExpressionUUID->"c8cb1a08-fbfc-4c1c-b31d-6d32ec289c24"],
+Cell[34598, 993, 1079, 32, 44, "SubitemNumbered",ExpressionUUID->"6fb64282-752b-4aae-b0e5-0166a82e1037"],
+Cell[35680, 1027, 342, 9, 26, "SubitemNumbered",ExpressionUUID->"daab4371-bd74-4a8d-abe6-ef61a9f1655d"]
+}, Open  ]],
+Cell[36037, 1039, 321, 7, 26, "ItemNumbered",ExpressionUUID->"eabb9697-a25e-4d55-8937-0e1a535070ea"]
+}, Open  ]],
+Cell[36373, 1049, 71, 0, 33, "Text",ExpressionUUID->"584a16e4-82e8-4d91-8745-21dbe9df2ebc"],
+Cell[36447, 1051, 567, 10, 54, "Text",ExpressionUUID->"d4f19a1d-8910-4dd3-848e-47eadeb5307d"],
+Cell[37017, 1063, 154, 7, 75, "Text",ExpressionUUID->"dbc09d1c-6a86-4e46-84b5-3dfcbf43594c"],
+Cell[37174, 1072, 692, 10, 33, "Text",ExpressionUUID->"ac8cada2-311f-41e7-818a-399f0f814234"]
+}, Open  ]]
+}
+]
+*)
+
