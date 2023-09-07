@@ -1,6 +1,6 @@
 # Calculus Labs: An Interactive Textbook with Mathematica
 David Wang
-## Table of Contents
+### Table of Contents
 
 | -- | -------------------------------------------------------|
 | 1	 | Getting Started with Mathematica                       |
