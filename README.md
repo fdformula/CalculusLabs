@@ -2,6 +2,7 @@
 David Wang
 ## Table of Contents
 
+| Unit | Content |
 | ------ | --------------------------------------------------------- |
 | 1	| Getting Started with Mathematica                         |
 | 2	| Functions and Graphs                                     |
