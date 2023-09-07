@@ -2,6 +2,8 @@
 David Wang
 ### Table of Contents
 
+|             |                                                        |
+|   --------- | -------------------------------------------------------|
 |   1         | Getting Started with Mathematica                       |
 |   2         | Functions and Graphs                                   |
 |   3         | Lists, Equations, and Rules                            |
