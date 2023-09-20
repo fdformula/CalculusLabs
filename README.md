@@ -14,7 +14,7 @@ This work is freely distributed under the MIT License.
 |   Unit      | Topics                                                 |
 |   --------- | -------------------------------------------------------|
 |   1         | Getting Started with Mathematica                       |
-|   2         | Functions, Their Graphs, and ```Show```                |
+|   2         | Functions and Their Graphs                             |
 |   3         | Lists, Equations, and Rules                            |
 |   4         | Limits and the ```Graphics``` Objects                  |
 |   5         | The Derivative and Tangent Lines                       |
