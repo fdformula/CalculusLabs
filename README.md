@@ -23,7 +23,7 @@ This work is freely distributed under the MIT License.
 |   8         | Antiderivatives and Differential Equations - ```SlopeFieldPlot```             |
 |   9         | Area Approximation, Riemann Sum, and Definite Integral |
 |   10        | Parametric and Polar Curves                            |
-|   11        | Sequences, Series, Fixed Point, Cobweb Plot, and Finite Difference Formulas      |
+|   11        | Sequences, Series, Fixed Point, ```CobwebPlot```, and Finite Difference Formulas      |
 |   12        | Trouble Shooting                                       |
 
 You may download the entire textbook through ```Code ▾```, found at the top of this page, and Download ZIP.
