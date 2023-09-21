@@ -14,16 +14,16 @@ This work is freely distributed under the MIT License.
 |   Unit      | Topics                                                 |
 |   --------- | -------------------------------------------------------|
 |   1         | Getting Started with Mathematica                       |
-|   2         | Functions and Their Graphs                             |
+|   2         | Unit 02 - Functions and Their Graphs - ```Show```, ```Animate```, and ```Manipulate``` |
 |   3         | Lists, Equations, and Rules                            |
 |   4         | Limits and the ```Graphics``` Objects                  |
 |   5         | The Derivative and Tangent Lines                       |
 |   6         | Applications of the Derivative (1)                     |
 |   7         | Applications of the Derivative (2)                     |
-|   8         | Antiderivatives and Differential Equations             |
+|   8         | Antiderivatives and Differential Equations - ```SlopeFieldPlot```             |
 |   9         | Area Approximation, Riemann Sum, and Definite Integral |
 |   10        | Parametric and Polar Curves                            |
-|   11        | Sequences, Series, and Finite Difference Formulas      |
+|   11        | Sequences, Series, Fixed Point, Cobweb Plot, and Finite Difference Formulas      |
 |   12        | Trouble Shooting                                       |
 
 You may download the entire textbook through ```Code ▾```, found at the top of this page, and Download ZIP.
