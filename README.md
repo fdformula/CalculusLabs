@@ -1,7 +1,7 @@
 # Calculus Labs: An Interactive Textbook with Mathematica
 David Wang
 
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif])
+![](https://github.com/Your_Repository_Name/Your_GIF_Name.gif)
 
 ### Description
 
