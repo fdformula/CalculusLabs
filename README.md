@@ -1,9 +1,6 @@
 # Calculus Labs: An Interactive Textbook with Mathematica
 David Wang
 
-# ![](https://github.com/fdformula/CalculusLabs/blob/main/img/1.gif)
-# ![](https://github.com/fdformula/CalculusLabs/blob/main/img/2.gif)
-
 ### Description
 
 Calculus Labs: An Interactive Textbook with Mathematica has been the textbook for Calculus with Mathematica Lab at Liberty University since Fall 2015. It is also useful to students of some advanced math courses, e.g., differential equations and numerical analysis. As a teacher, I know what my colleagues and I love. So, many cute examples for teaching and learning are included. They are certainly attractive to students, too. Therefore, I wish this textbook to be a blessing to many students and instructors as well.
