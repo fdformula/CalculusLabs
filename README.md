@@ -1,8 +1,8 @@
 # Calculus Labs: An Interactive Textbook with Mathematica
 David Wang
 
-![](https://github.com/fdformula/CalculusLabs/blob/main/img/1.gif)
-![](https://github.com/fdformula/CalculusLabs/blob/main/img/2.gif)
+# ![](https://github.com/fdformula/CalculusLabs/blob/main/img/1.gif)
+# ![](https://github.com/fdformula/CalculusLabs/blob/main/img/2.gif)
 
 ### Description
 
